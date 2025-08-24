@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import * as notificationService from '../services/notification.service';
 
 // Simple in-memory store for push tokens (in production, use a database)
-const userPushTokens: Record<string, string[]> = {};
+export const userPushTokens: Record<string, string[]> = {};
 
 export const handleSendSms = async (req: Request, res: Response) => {
   const { to, body } = req.body;
